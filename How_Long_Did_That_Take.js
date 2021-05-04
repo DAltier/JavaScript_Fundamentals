@@ -37,7 +37,7 @@ const { performance } = require('perf_hooks');
 const start = performance.now();
 let primeCount = 0;
 let num = 2; // for math reasons, 1 is considered prime
-while( primeCount < 1e4 ) {
+while( primeCount < 10000 ) {
   if( num.isPrime() ) {
     primeCount++;
   }
@@ -47,6 +47,15 @@ console.log(`The 10,000th prime number is ${num-1}`);
 console.log(`This took ${performance.now() - start} milliseconds to run`);
 // The 10,000th prime number is 104003
 // This took 355.0628001689911 milliseconds to run
+console.log(`The 100,000th prime number is ${num-1}`);
+console.log(`This took ${performance.now() - start} milliseconds to run`);
+// The 100,000th prime number is 1297001
+// This took 14126.993900060654 milliseconds to run
+console.log(`The 1,000,000th prime number is ${num-1}`);
+console.log(`This took ${performance.now() - start} milliseconds to run`);
+// The 1,000,000th prime number is 15476717
+// This took 484530.0432999134 milliseconds to run
+
 
 
 // Fibonacci
